@@ -21,6 +21,7 @@ class SignIn extends Component {
   }
 
   render() {
+    const { authError } = this.props
     return (
       <div>
         <div>
@@ -36,6 +37,9 @@ class SignIn extends Component {
             </div>
             <div>
               <button>Login</button>
+              <div>
+                { authError ? <p>{authError}</p> : null }
+              </div>
             </div>
           </form>
         </div>
