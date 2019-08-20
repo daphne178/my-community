@@ -32,27 +32,27 @@ class SignUp extends Component {
 
     return (
       <div>
-        <div>
+        <div className="field">
           <form onSubmit={this.handleSubmit}>
             <h5>Sign Up</h5>
             <div>
-              <label htmlFor='firstName'>First Name</label>
-              <input type='text' id='firstName' onChange={this.handleChange}/>
+              <label className="label" htmlFor='firstName'>First Name</label>
+              <input className="input" type='text' id='firstName' onChange={this.handleChange}/>
             </div>
             <div>
-              <label htmlFor='lastName'>Last Name</label>
-              <input type='text' id='lastName' onChange={this.handleChange}/>
+              <label className="label" htmlFor='lastName'>Last Name</label>
+              <input className="input" type='text' id='lastName' onChange={this.handleChange}/>
             </div>
             <div>
-              <label htmlFor='email'>Email</label>
-              <input type='email' id='email' onChange={this.handleChange}/>
+              <label className="label" htmlFor='email'>Email</label>
+              <input className="input" type='email' id='email' onChange={this.handleChange}/>
             </div>
             <div>
-              <label htmlFor='password'>Password</label>
-              <input type='password' id='password' onChange={this.handleChange}/>
+              <label className="label" htmlFor='password'>Password</label>
+              <input className="input" type='password' id='password' onChange={this.handleChange}/>
             </div>
             <div>
-              <button>Sign Up</button>
+              <button className="button is-link">Sign Up</button>
               <div>
                 { authError ? <p>{authError}</p> : null }
               </div>

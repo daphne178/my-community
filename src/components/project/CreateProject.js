@@ -31,19 +31,20 @@ class CreateProject extends Component {
 
     return (
       <div>
-        <div>
+        <div className="field">
           <form onSubmit={this.handleSubmit}>
             <h5>Create New Project</h5>
             <div>
-              <label htmlFor='title'>Title</label>
-              <input type='text' id='title' onChange={this.handleChange}/>
+              <label className="label" htmlFor='title'>Title</label>
+              <input className="input" type='text' id='title' onChange={this.handleChange}/>
+            </div>
+            <br></br>
+            <div>
+              <label className="label" htmlFor='content'>Project Content</label>
+              <textarea className="textarea" id='content' onChange={this.handleChange}/>
             </div>
             <div>
-              <label htmlFor='content'>Project Content</label>
-              <textarea id='content' onChange={this.handleChange}/>
-            </div>
-            <div>
-              <button>Create</button>
+              <button className="button is-link">Create</button>
             </div>
           </form>
         </div>

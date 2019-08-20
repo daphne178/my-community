@@ -9,10 +9,14 @@ const Navbar = (props) => {
   const { auth, profile } = props
   const links = auth.uid ? <SignInLink profile={profile}/> : <SignOutLink />
   return (
-    <nav>
-      <div>
-        <Link to='/'>My Community</Link>
-        { links }
+    <nav className="navbar" role="navigation" aria-label="main navigation">
+      <div  className="navbar-brand">
+        <Link to='/' className="title is-2">My Community</Link>
+        <div  className="navbar-end">
+          <div className="navbar-item">
+          { links }
+          </div>
+        </div>
       </div>
     </nav>
   )
