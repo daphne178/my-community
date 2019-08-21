@@ -9,7 +9,7 @@ const SignOutLink = () => {
       </div>
       <div className="button is-success link-button ">
         <NavLink to='/signin' className="has-text-white">Login</NavLink>
-        </div>
+      </div>
     </div>
   )
 }

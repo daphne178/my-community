@@ -33,36 +33,33 @@ class SignUp extends Component {
     return (
       <div className="signin-page">
         <div className="box">
-
-        <div className="field signin-box">
-          <form onSubmit={this.handleSubmit}>
-            <h5 className="title is-5">Sign Up</h5>
-            <div>
-              <label className="label" htmlFor='firstName'>First Name</label>
-              <input className="input" type='text' id='firstName' onChange={this.handleChange}/>
-            </div>
-            <div>
-              <label className="label" htmlFor='lastName'>Last Name</label>
-              <input className="input" type='text' id='lastName' onChange={this.handleChange}/>
-            </div>
-            <div>
-              <label className="label" htmlFor='email'>Email</label>
-              <input className="input" type='email' id='email' onChange={this.handleChange}/>
-            </div>
-            <div>
-              <label className="label" htmlFor='password'>Password</label>
-              <input className="input" type='password' id='password' onChange={this.handleChange}/>
-            </div>
-            <div>
-              <button className="button is-link">Sign Up</button>
+          <div className="field signin-box">
+            <form onSubmit={this.handleSubmit}>
+              <h5 className="title is-5">Sign Up</h5>
               <div>
-                { authError ? <p>{authError}</p> : null }
+                <label className="label" htmlFor='firstName'>First Name</label>
+                <input className="input" type='text' id='firstName' onChange={this.handleChange}/>
               </div>
-            </div>
-          </form>
+              <div>
+                <label className="label" htmlFor='lastName'>Last Name</label>
+                <input className="input" type='text' id='lastName' onChange={this.handleChange}/>
+              </div>
+              <div>
+                <label className="label" htmlFor='email'>Email</label>
+                <input className="input" type='email' id='email' onChange={this.handleChange}/>
+              </div>
+              <div>
+                <label className="label" htmlFor='password'>Password</label>
+                <input className="input" type='password' id='password' onChange={this.handleChange}/>
+              </div>
+              <div>
+                <button className="button is-link">Sign Up</button>
+                <div> { authError ? <p>{authError}</p> : null } </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-        </div>
     )
   }
 }

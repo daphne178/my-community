@@ -15,12 +15,12 @@ class Dashboard extends Component {
     }　else {
       return (
         <div className="dashboard">
-            <div>
-              <ProjectList projects={projects} />
-            </div>
-            <div>
-              <Notifications notifications={notifications} />
-            </div>
+          <div>
+            <ProjectList projects={projects} />
+          </div>
+          <div>
+            <Notifications notifications={notifications} />
+          </div>
         </div>
       )
     }

@@ -12,7 +12,7 @@ const SignInLink = (props) => {
       <div className="button is-success link-button" onClick={props.signOut}>Log Out</div>
       <div className="button is-danger link-button" >
         <NavLink to='/' className="has-text-white">{props.profile.initials}</NavLink>
-        </div>
+      </div>
     </div>
   )
 }

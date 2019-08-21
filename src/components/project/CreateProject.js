@@ -39,7 +39,7 @@ class CreateProject extends Component {
                 <label className="label" htmlFor='title'>Title</label>
                 <input className="input" type='text' id='title' onChange={this.handleChange}/>
               </div>
-              <br></br>
+              <br/>
               <div>
                 <label className="label" htmlFor='content'>Project Content</label>
                 <textarea className="textarea" id='content' onChange={this.handleChange}/>
