@@ -11,10 +11,10 @@ const Navbar = (props) => {
   return (
     <nav>
       <div className="navbar">
-        <div className="navbar-brand">
+        <div className="navbar-brand navbar-pot navbar-title ">
         <Link to='/' className="title is-2">My Community</Link>
         </div>
-        <div  className="navbar-end">
+        <div  className="navbar-end navbar-pot">
           <div>
           { links }
           </div>

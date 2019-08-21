@@ -31,7 +31,7 @@ class CreateProject extends Component {
 
     return (
       <div className="new-project-box">
-        <div className="new-project" className='box'>
+        <div className="new-project box">
           <div className="field">
             <form onSubmit={this.handleSubmit}>
               <h5 className="title is-5">Create New Project</h5>

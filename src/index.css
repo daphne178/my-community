@@ -1,6 +1,11 @@
+body {
+  background-color: papayawhip;
+  min-height: 700px;
+}
+
 form {
-  padding: 20px;
-  margin-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 form button, form h5{
@@ -10,6 +15,7 @@ form button, form h5{
 .noti-box {
   width: 400px;
   margin: 20px 0;
+  margin-left: 20px;
 }
 
 .project-list-box {
@@ -17,28 +23,60 @@ form button, form h5{
   margin: 20px;
 }
 
+.navbar-stay {
+  position: fixed;
+  width: 100%;
+}
+
 .navbar {
-  height: 100px;
+  height: 75px;
   display: flex;
-  align-content: center;
+}
+
+.navbar-pot {
+  align-self: center;
+}
+
+.navbar-title {
+  margin-left: 20px;
 }
 
 .dashboard {
   display: flex;
   justify-content: center;
-
+  padding-top: 80px;
 }
 
 .box-detail {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 }
 
-.new-project {
-  /* width: 500px; */
+.detail-box {
+  width: 500px;
+}
+
+.signin-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.signin-box {
+  width: 500px;
 }
 
 .new-project-box {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
+}
+
+.new-project {
+  width: 500px;
+}
+
+.link-button {
+  margin: 5px;
 }

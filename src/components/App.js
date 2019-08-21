@@ -12,7 +12,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
+          <div className="navbar-stay">
+            <Navbar />
+          </div>
           <Switch>
             <Route exact path='/' component={Dashboard} />
             <Route path='/project/:id' component={ProjectDetails} />

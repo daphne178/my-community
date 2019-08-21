@@ -31,8 +31,10 @@ class SignUp extends Component {
     }
 
     return (
-      <div>
-        <div className="field">
+      <div className="signin-page">
+        <div className="box">
+
+        <div className="field signin-box">
           <form onSubmit={this.handleSubmit}>
             <h5 className="title is-5">Sign Up</h5>
             <div>
@@ -60,6 +62,7 @@ class SignUp extends Component {
           </form>
         </div>
       </div>
+        </div>
     )
   }
 }
