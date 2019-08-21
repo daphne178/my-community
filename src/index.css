@@ -20,3 +20,29 @@ form {
 form button, form h5{
   margin: 20px 0;
 }
+
+.noti-box {
+  width: 400px;
+  margin: 20px 0;
+}
+
+.project-list-box {
+  width: 500px;
+  margin: 20px;
+}
+
+.navbar {
+  height: 75px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+
+}
+
+.box-detail {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+}

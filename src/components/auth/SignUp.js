@@ -34,7 +34,7 @@ class SignUp extends Component {
       <div>
         <div className="field">
           <form onSubmit={this.handleSubmit}>
-            <h5>Sign Up</h5>
+            <h5 className="title is-5">Sign Up</h5>
             <div>
               <label className="label" htmlFor='firstName'>First Name</label>
               <input className="input" type='text' id='firstName' onChange={this.handleChange}/>

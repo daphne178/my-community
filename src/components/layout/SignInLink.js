@@ -5,12 +5,10 @@ import { signOut } from '../../store/actions/authActions'
 
 const SignInLink = (props) => {
   return (
-    <div className="navbar-item">>
-    <ul>
-      <li><NavLink to='/create-project'>New Project</NavLink></li>
-      <li><a onClick={props.signOut}>Log Out</a></li>
-      <li><NavLink to='/'>{props.profile.initials}</NavLink></li>
-    </ul>
+    <div className="navbar-item">
+      <div className="button is-primary"><NavLink to='/create-project' >New Project</NavLink></div>
+      <div className="button is-success" onClick={props.signOut}>Log Out</div>
+      <div className="button is-danger"><NavLink to='/'>{props.profile.initials}</NavLink></div>
     </div>
   )
 }

@@ -14,14 +14,14 @@ const ProjectDetails = (props) => {
 
   if(project){
     return (
-    <div>
-      <div>
+    <div className="box-detail">
+      <div className="box">
         <div>
-          <span>{project.title}</span>
+          <span className="title is-4">{project.title}</span>
           <p>{project.content}</p>
         </div>
         <div>
-          <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
+          <div className="subtitle is-5">Posted by {project.authorFirstName} {project.authorLastName}</div>
           <div>{moment(project.createdAt.toDate()).calendar()}</div>
         </div>
       </div>

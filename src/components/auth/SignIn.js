@@ -33,7 +33,7 @@ class SignIn extends Component {
       <div>
         <div className="field">
           <form onSubmit={this.handleSubmit}>
-            <h5>Sign In</h5>
+            <h5 className="title is-5">Sign In</h5>
             <div>
               <label htmlFor='email' className="label">Email</label>
               <input className="input" type='email' id='email' onChange={this.handleChange}/>

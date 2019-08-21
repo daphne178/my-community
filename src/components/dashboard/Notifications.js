@@ -7,16 +7,18 @@ const Notifications = (props) => {
 
   return (
     <div>
-      <div>
-        <div>
-          <span>Notifications</span>
-          <ul className='notification'>
+      <div className='noti-box'>
+        <div className="box">
+          <span className="title is-5">Notifications</span>
+          <br/>
+          <br/>
+          <ul>
             { notifications && notifications.map(notification => {
               return (
-                <li key={notification.id} >
+                <li className="content" key={notification.id} >
                   <span>{notification.user} </span>
                   <span>{notification.content}</span>
-                  <div>{moment(notification.time.toDate()).fromNow()}</div>
+                  <p className="is-size-6 has-text-grey">{moment(notification.time.toDate()).fromNow()}</p>
                 </li>
               )
             })}

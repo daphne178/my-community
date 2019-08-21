@@ -33,7 +33,7 @@ class CreateProject extends Component {
       <div>
         <div className="field">
           <form onSubmit={this.handleSubmit}>
-            <h5>Create New Project</h5>
+            <h5 className="title is-5">Create New Project</h5>
             <div>
               <label className="label" htmlFor='title'>Title</label>
               <input className="input" type='text' id='title' onChange={this.handleChange}/>

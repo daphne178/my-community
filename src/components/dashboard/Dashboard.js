@@ -14,15 +14,13 @@ class Dashboard extends Component {
       return <Redirect to='/signin' />
     }　else {
       return (
-        <div>
-          <div>
+        <div className="dashboard">
             <div>
               <ProjectList projects={projects} />
             </div>
             <div>
               <Notifications notifications={notifications} />
             </div>
-          </div>
         </div>
       )
     }
