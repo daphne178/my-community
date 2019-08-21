@@ -32,5 +32,13 @@ form button, form h5{
 .box-detail {
   display: flex;
   justify-content: center;
-  width: 600px;
+}
+
+.new-project {
+  /* width: 500px; */
+}
+
+.new-project-box {
+  display: flex;
+  justify-content: center;
 }
