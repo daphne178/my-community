@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 My Community Website: https://my-community-97be6.firebaseapp.com/
 
 ![alt text](Screenshot.png)
