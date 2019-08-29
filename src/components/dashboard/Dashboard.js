@@ -10,9 +10,9 @@ class Dashboard extends Component {
   render() {
     const { projects, auth, notifications } = this.props
 
-    if(!auth.uid){
-      return <Redirect to='/signin' />
-    }　else {
+    // if(!auth.uid){
+    //   return <Redirect to='/signin' />
+    // }　else {
       return (
         <div className="dashboard">
           <div>
@@ -23,7 +23,7 @@ class Dashboard extends Component {
           </div>
         </div>
       )
-    }
+    // }
   }
 }
 
