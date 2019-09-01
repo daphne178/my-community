@@ -7,12 +7,19 @@ import moment from 'moment'
 
 const ProjectDetails = (props) => {
   const { project, auth } = props
+  const projectId = props.match.params.id
+
+  const deleteProject = () => {
+    console.log(projectId)
+  }
 
   // if(!auth.uid){
   //   return <Redirect to='/signin' />
   // }
 
   if(project && auth.uid === project.authorId){
+    console.log(props)
+    // console.log(project)
     return (
       <div className="box-detail">
         <div className="box detail-box">
@@ -27,7 +34,7 @@ const ProjectDetails = (props) => {
             <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
             <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
           </div>
-          <div>Delete</div>
+          <div onClick={deleteProject}>Delete</div>
         </div>
       </div>
     )
