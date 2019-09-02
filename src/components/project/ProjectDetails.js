@@ -1,70 +1,94 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
 
-const ProjectDetails = (props) => {
-  const { project, auth } = props
-  const projectId = props.match.params.id
+class ProjectDetails extends Component {
 
-  const deleteProject = () => {
-    console.log(projectId)
+  state = {
+    redirect: false,
+    projectId: this.props.match.params.id
   }
 
-  // if(!auth.uid){
-  //   return <Redirect to='/signin' />
-  // }
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
 
-  if(project && auth.uid === project.authorId){
-    console.log(props)
-    // console.log(project)
-    return (
-      <div className="box-detail">
-        <div className="box detail-box">
-          <div>
-            <span className="title is-4">{project.title}</span>
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/' />
+    }
+  }
+
+  render(){
+    const { project, auth } = this.props
+    const projectId = this.props.match.params.id
+
+    // if(!auth.uid){
+    //   return <Redirect to='/signin' />
+    // }
+
+    // if(this.state.redirect){
+    //   return <Redirect to='/' />
+    // }
+
+    if(project && auth.uid === project.authorId){
+      // console.log(props)
+      return (
+        <div className="box-detail">
+          <div className="box detail-box">
+            <div>
+              <span className="title is-4">{project.title}</span>
+              <br/>
+              <br/>
+              <p className="is-1 has-text-black-ter">{project.content}</p>
+            </div>
             <br/>
-            <br/>
-            <p className="is-1 has-text-black-ter">{project.content}</p>
+            <div>
+              <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
+              <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
+            </div>
+            <div>
+              {this.renderRedirect()}
+              <button onClick={this.setRedirect}>Delete</button>
+            </div>
           </div>
-          <br/>
-          <div>
-            <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
-            <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
-          </div>
-          <div onClick={deleteProject}>Delete</div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
 
-  if(project){
-    return (
-      <div className="box-detail">
-        <div className="box detail-box">
-          <div>
-            <span className="title is-4">{project.title}</span>
+    if(project){
+      return (
+        <div className="box-detail">
+          <div className="box detail-box">
+            <div>
+              <span className="title is-4">{project.title}</span>
+              <br/>
+              <br/>
+              <p className="is-1 has-text-black-ter">{project.content}</p>
+            </div>
             <br/>
-            <br/>
-            <p className="is-1 has-text-black-ter">{project.content}</p>
-          </div>
-          <br/>
-          <div>
-            <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
-            <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
+            <div>
+              <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
+              <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
+            </div>
           </div>
         </div>
-      </div>
-    )
-  } else {
-    return (
-      <div>
-        <p>Loading Project...</p>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div>
+          <p>Loading Project...</p>
+        </div>
+      )
+    }
   }
+
+
 }
 
 const mapStateToProps = (state, ownProps) => {
