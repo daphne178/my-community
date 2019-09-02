@@ -16,6 +16,11 @@ const ProjectList = ({projects}) => {
           </div>
         )
       })}
+      <div className="project-list-box">
+            <div className="box">
+              <p>SignUp/Login to create a new project :)</p>
+            </div>
+          </div>
     </div>
   )
 }
