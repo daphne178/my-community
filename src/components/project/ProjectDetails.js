@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
+import firebase from '../../config/fbConfig'
 
 class ProjectDetails extends Component {
 
@@ -13,6 +14,12 @@ class ProjectDetails extends Component {
   }
 
   setRedirect = () => {
+    firebase.firestore().collection('projects').doc(this.state.projectId).delete().then(() => {
+      console.log("Document successfully deleted!");
+      this.props.history.push("/")
+    }).catch((error) => {
+      console.error("Error removing document: ", error);
+    });
     this.setState({
       redirect: true
     })
@@ -37,7 +44,6 @@ class ProjectDetails extends Component {
     // }
 
     if(project && auth.uid === project.authorId){
-      // console.log(props)
       return (
         <div className="box-detail">
           <div className="box detail-box">
@@ -87,8 +93,6 @@ class ProjectDetails extends Component {
       )
     }
   }
-
-
 }
 
 const mapStateToProps = (state, ownProps) => {
