@@ -14,9 +14,10 @@ class ProjectDetails extends Component {
   }
 
   setRedirect = () => {
-    firebase.firestore().collection('projects').doc(this.state.projectId).delete().then(() => {
-      console.log("Document successfully deleted!");
-      this.props.history.push("/")
+    firebase.firestore().collection('projects').doc(this.state.projectId).delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+        this.props.history.push("/")
     }).catch((error) => {
       console.error("Error removing document: ", error);
     });
@@ -82,7 +83,7 @@ class ProjectDetails extends Component {
               <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
               <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
             </div>
-          </div>
+          </div>const { auth } = this.props
         </div>
       )
     } else {
