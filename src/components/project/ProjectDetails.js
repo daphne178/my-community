@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
@@ -36,12 +37,10 @@ class ProjectDetails extends Component {
     const { project, auth } = this.props
     const projectId = this.props.match.params.id
 
+    console.log('DETAILS', this.props)
+    console.log('PROJECT', project)
     // if(!auth.uid){
     //   return <Redirect to='/signin' />
-    // }
-
-    // if(this.state.redirect){
-    //   return <Redirect to='/' />
     // }
 
     if(project && auth.uid === project.authorId){
@@ -59,9 +58,23 @@ class ProjectDetails extends Component {
               <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
               <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
             </div>
-            <div>
-              {this.renderRedirect()}
-              <button className="button is-danger link-button-d" onClick={this.setRedirect}>Delete</button>
+            <div className='user-project-b'>
+              <div>
+                {this.renderRedirect()}
+                <button className="button is-danger link-button-d" onClick={this.setRedirect}>Delete</button>
+              </div>
+              <div>
+                <button className="button is-primary link-button-d">
+                  <Link to={{
+                      pathname: `/update/${projectId}`,
+                      state: {
+                        auth: auth,
+                        project: project
+                      }
+                    }}
+                    className="has-text-white">Update</Link>
+                </button>
+              </div>
             </div>
           </div>
         </div>

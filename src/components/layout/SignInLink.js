@@ -5,7 +5,7 @@ import { signOut } from '../../store/actions/authActions'
 
 class SignInLink extends Component {
   render(){
-    console.log('SignIn', this.props)
+    // console.log('SignIn', this.props)
     const { auth } = this.props
     return (
       <div className="navbar-item">

@@ -85,3 +85,7 @@ form button, form h5{
   margin: 5px;
   margin-top: 15px;
 }
+
+.user-project-b {
+  display: flex;
+}

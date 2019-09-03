@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ProjectSummary from './project/ProjectSummary'
+import ProjectSummary from './ProjectSummary'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
