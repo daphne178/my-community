@@ -61,7 +61,7 @@ class ProjectDetails extends Component {
             </div>
             <div>
               {this.renderRedirect()}
-              <button onClick={this.setRedirect}>Delete</button>
+              <button className="button is-danger link-button-d" onClick={this.setRedirect}>Delete</button>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ class ProjectDetails extends Component {
               <div className="is-3 has-text-grey-dark">Posted by {project.authorFirstName} {project.authorLastName}</div>
               <div className="is-6 has-text-grey">{moment(project.createdAt.toDate()).calendar()}</div>
             </div>
-          </div>const { auth } = this.props
+          </div>
         </div>
       )
     } else {
