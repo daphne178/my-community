@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import firebase from '../../config/fbConfig'
 
-class UpdateProject extends Component {
+class EditProject extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -84,7 +84,7 @@ class UpdateProject extends Component {
                 <textarea className="textarea" id='content' onChange={this.onChange}>{project.content}</textarea>
               </div>
               <div>
-                <button className="button is-link">Update</button>
+                <button className="button is-link">Submit</button>
               </div>
             </form>
           </div>
@@ -105,4 +105,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(UpdateProject)
+export default connect(mapStateToProps)(EditProject)

@@ -72,7 +72,7 @@ class ProjectDetails extends Component {
                         project: project
                       }
                     }}
-                    className="has-text-white">Update</Link>
+                    className="has-text-white">Edit</Link>
                 </button>
               </div>
             </div>
