@@ -37,10 +37,12 @@ class UserProjects extends Component {
       )
     } else {
       return (
-        <div>
-        <p>Loading Project...</p>
-      </div>
-      )
+            <div className="project-list-box">
+              <div className="box">
+                <p>You haven't create any project yet!</p>
+              </div>
+            </div>
+          )
     }
   }
 }
