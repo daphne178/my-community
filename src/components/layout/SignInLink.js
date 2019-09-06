@@ -14,8 +14,8 @@ class SignInLink extends Component {
         </div>
         <div className="button is-success link-button" onClick={this.props.signOut}>Log Out</div>
         <div className="button is-danger link-button" >
-          {/* <NavLink to={`/user/${auth.uid}`} className="has-text-white">{this.props.profile.initials}</NavLink> */}
-          <NavLink to={`/`} className="has-text-white">{this.props.profile.initials}</NavLink>
+          <NavLink to={`/user/${auth.uid}`} className="has-text-white">{this.props.profile.initials}</NavLink>
+          {/* <NavLink to={`/`} className="has-text-white">{this.props.profile.initials}</NavLink> */}
         </div>
       </div>
     )
